@@ -64,6 +64,8 @@ def eye_tracker(roi_gray, fx, fy, frame):
         message(frame, 'Both eyes open')
         time = 0
 
+    Buzzer()
+
 
 def face_tracker(frame):
 
