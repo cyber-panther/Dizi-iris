@@ -2,9 +2,8 @@ import cv2 as cv
 import winsound
 
 frequency = 2500  # Set Frequency To 2500 Hertz
-duration = 1000  # Set Duration To 1000 ms == 1 second
+duration = 250  # Set Duration
 time = 0
-
 
 def set_up():
     global capture
@@ -24,10 +23,10 @@ def message(frame, message):
 def Buzzer():
     if(time > 30):
         print(time)
-        winsound.Beep(frequency, 1000)
+        winsound.Beep(frequency, duration)
 
 
-def rescale_frame(frame, scale=1):
+def rescale_frame(frame, scale=1.25):
     width = int(frame.shape[1] * scale)
     heigth = int(frame.shape[0] * scale)
 
